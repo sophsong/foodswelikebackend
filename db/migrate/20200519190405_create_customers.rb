@@ -4,7 +4,7 @@ class CreateCustomers < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :age
       t.string :priorities
-
+      
       t.timestamps
     end
   end
