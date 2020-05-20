@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+class Api::V1::ReviewsController < ApplicationController
     def index
         reviews = Review.all 
         render json: reviews
@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
 
     def show 
         review = Review.find(params[:id])
+        render json: review
     end
 
 

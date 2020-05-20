@@ -1,4 +1,4 @@
-class CustomersController < ApplicationController
+class Api::V1::CustomersController < ApplicationController
 
     def create
         customer = Customer.new(customer_params)
@@ -8,6 +8,7 @@ class CustomersController < ApplicationController
     
     def show
         customer = Customer.find(params[:id])
+        render json: customer
     end
 
 end
