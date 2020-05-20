@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Customer.destroy_all
+Restaurant.destroy_all
+Review.destroy_all
+
+Customer.create!(name: "Sophia", age: 20, priorities: "fresh, health food")
+Restaurant.create!(name: "Local Greek", location: "Princeton, NJ", capacity: 50, rating: 4.5 )
+Review.create!(content: "This restaurant was amazing", customer_id: Customer.first.id, restaurant_id: Restaurant.first.id)
